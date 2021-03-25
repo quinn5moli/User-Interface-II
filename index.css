@@ -12,8 +12,13 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-  header{
+body{
+  background-color: #FBFFFB;
+}  
+header{
      background-color:lightgrey;
+     position:sticky;
+     top:0;
   }
   h1{
     display:flex;
@@ -31,18 +36,12 @@ footer{
 .box{
   align-items:center;
 }
-.name{
-  font-style:oblique;
-}
-.random{ content:url("https://picsum.photos/seed/picsum/200");
- margin: 50px 0.5%;
-}
-#about-top{
-  justify-content: space-between;
-}
-#about-top-image{
-  width: 30em;
+.about-top-image{
+  width: 50%;
   justify-content:flex-start; 
+}
+.about-top{
+  flex-direction: column;
 }
 #about-top-text{
   flex-direction: column;
@@ -77,4 +76,35 @@ footer{
   width:13em;
   height:13em;
   padding-top: 4em;
+}
+
+@media (max-width:800px){
+  header{
+    background-color: purple;
+    color: white;
+  }
+    h1{
+      color:white;
+      background-color: black;
+    }
+    .about-top-image{
+      height:40vh;
+    }
+}
+@media (max-width:500px){
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+  .flex{
+    display: inline-flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .about-top-image{
+    height:30vh;
+    align-items: top;
+    justify-content: center;  
+  }
+  
 }
